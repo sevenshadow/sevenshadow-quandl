@@ -53,13 +53,13 @@ namespace SevenShadow.Quandl.DataSets
                         Low = decimal.Parse(jsonObject["data"][i][4].ToString()),
                         Count = decimal.Parse(jsonObject["data"][i][5].ToString()),
                         StandardDeviation = jsonObject["data"][i][6].ToString() != string.Empty ? decimal.Parse(jsonObject["data"][i][6].ToString()) : 0,
-                        PercentChange = decimal.Parse(jsonObject["data"][i][7].ToString()),
+                        PercentChange = jsonObject["data"][i][7].ToString() != string.Empty ? decimal.Parse(jsonObject["data"][i][7].ToString()) : 0,
                         FiscalYear = int.Parse(jsonObject["data"][i][8].ToString()),
                         FiscalQuarter = int.Parse(jsonObject["data"][i][9].ToString()),
                         CalendarYear = int.Parse(jsonObject["data"][i][10].ToString()),
 
                         CalendarQuarter = int.Parse(jsonObject["data"][i][11].ToString()),
-                        PerCode = int.Parse(jsonObject["data"][i][12].ToString()),
+                        PerCode = jsonObject["data"][i][12].ToString() != string.Empty ? int.Parse(jsonObject["data"][i][12].ToString()) : 0
 
                     });
                 }
