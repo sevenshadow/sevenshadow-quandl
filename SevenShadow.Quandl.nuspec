@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SevenShadow.Quandl</id>
-    <version>$version$</version>
+    <version>1.1.0.0</version>
     <title>SevenShadow.Quandl</title>
     <authors>Charlie Strout</authors>
     <owners>Seven Shadow LLC</owners>
